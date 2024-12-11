@@ -25,7 +25,7 @@ function validateForm(event) { // Add event parameter
 }
 
 function reload(event){
-    formContainer.style.display = 'grid';
+    formContainer.style.display = 'flex';
     successMsg.style.display = 'none'
 }
 
