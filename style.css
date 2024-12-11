@@ -112,7 +112,7 @@ body {
     text-align: center;
 }
 
-.btn:active{
+.btn:active, .btn:hover{
     background: linear-gradient(to right, rgb(255, 62, 131), rgb(255, 159, 46));
     box-shadow: 0 4px 12px 0 rgba(255, 62, 131, 0.2), 0 6px 25px 0 rgba(255, 159, 46, 0.19);
     border: none;
