@@ -30,6 +30,7 @@
         <fieldset>
           <legend>Email address</legend>
           <input type="email" id="email" placeholder="email@company.com" class="email">
+          <span aria-live="polite" id="errorMsg" class="hidden">Valid email required</span>
           <input type="submit" id="submitForm" value="Subscribe to monthly newsletter" class="btn">
         </fieldset>
       </div>
@@ -52,7 +53,7 @@
     
     <h1>Thanks for subscribing!</h1>
 
-      <p>A confirmation email has been sent to <span>ash@loremcompany.com</span>. 
+      <p>A confirmation email has been sent to <span id="userMail">ash@loremcompany.com</span> 
       Please open it and click the button inside to confirm your subscription.</p>
 
       <input type="submit" value="Dismiss message" id="successBtn" class="btn">

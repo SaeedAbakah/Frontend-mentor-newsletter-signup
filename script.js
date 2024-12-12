@@ -3,25 +3,33 @@ var formContainer = document.getElementById('formContainer');
 var submitForm = document.getElementById('submitForm');
 var successMsg = document.getElementById('successMsg');
 var successBtn = document.getElementById('successBtn');
-var mobileScreen = window.matchMedia("(max-width:63px)");
+var userInput = document.getElementById('userMail');
+var mail = document.getElementById('email');
+var errorMsg = document.getElementById('errorMsg')
+    
+
 
 function handleSubmit(e) {
-    e.preventDefault() // prevent the default behaviour
+    e.preventDefault()
   }
 
-function validateForm(event) { // Add event parameter
-    //  A more robust email regex (but still not perfect)
+function validateForm(event) {
     var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-    var mail = document.getElementById('email');
-    if (emailRegex.test(mail.value)) { // Use .test() and mail.value
+
+    userInput.innerHTML = mail.value.trim() + '.';
+
+    if (emailRegex.test(mail.value)) {
         formContainer.style.display = "none";
         successMsg.style.display = "block";
         return true;
-    } else {
-        // Optionally, provide feedback to the user
-        alert("Please enter a valid email address.");
-        return false; // Important: Prevent form submission if invalid
+
+    } 
+
+    else{
+        errorMsg.classList.remove('hidden');
+        mail.classList.add('error');
     }
+    
 }
 
 function reload(event){
@@ -30,5 +38,5 @@ function reload(event){
 }
 
 successBtn.addEventListener('click', reload)
-submitForm.addEventListener('click', validateForm); // Remove the () here
+submitForm.addEventListener('click', validateForm);
 submitForm.addEventListener('click', handleSubmit);

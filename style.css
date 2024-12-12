@@ -84,6 +84,7 @@ body {
     grid-template-rows: 1fr 1fr;
     border: transparent;
     row-gap: 1.5rem;
+    position: relative;
 }
 
 .container fieldset legend {
@@ -101,11 +102,25 @@ body {
     margin-top: 1rem;
     border: 1px var(--Grey) solid;
     text-align: center;
+    
 }
 
-.email:invalid{
+.error {
+    color: var(--Tomatoo);
+    font-weight: 400;
+    background-color: #ffeae8;
+    border-color: var(--Tomato);
+}
+
+#errorMsg {
     color: var(--Tomato);
-    outline: 1px solid var(--Tomato);
+    font-size: 12px;
+    position: absolute;
+    right: 0;
+}
+
+.hidden {
+    display: none;
 }
 
 .btn {
