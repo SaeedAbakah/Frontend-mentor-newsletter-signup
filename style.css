@@ -69,12 +69,12 @@ body {
 }
 
 
-.container .desktop svg{
+.container .desktop img{
     width: 100%;
     height: 100%;
 }
 
-.container .desktop svg:first-child{
+.container .desktop img:first-child{
     display: none;
 }
 
@@ -167,11 +167,11 @@ body {
         border-radius: 0;
     }
 
-    .container .desktop svg:first-child{
+    .container .desktop img:first-child{
         display: block;
     }
 
-    .container .desktop svg:last-child{
+    .container .desktop img:last-child{
         display: none;
     }
 
